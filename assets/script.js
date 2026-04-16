@@ -41,3 +41,8 @@ function gerarSenha() {
 
   document.getElementById('senhaOutput').value = senha;
 }
+
+
+
+
+// ── Geração de CPF válido ──

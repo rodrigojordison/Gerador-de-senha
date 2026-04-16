@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Gerador de CPF é uma ferramenta online que permite criar CPFs válidos para testes e desenvolvimento. Gere CPFs formatados ou apenas os números, com verificação dos dígitos."
+    />
+    <meta
+      name="keywords"
+      content="gerador de CPF, CPF válido, criar CPF, CPF para teste, ferramenta online, desenvolvimento"
+    />
+    <meta name="author" content="Rodrigo Silva" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0f1e" />
+
+    <link rel="icon" type="image/png" href="assets/imagens/favicon.png" />
+    <link rel="shortcut icon" href="assets/imagens/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/imagens/favicon.png" />
+
+    <meta property="og:title" content="Gerador de CPF" />
+    <meta
+      property="og:description"
+      content="Gere CPFs válidos para testes e desenvolvimento."
+    />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Gerador de CPF" />
+    <meta
+      name="twitter:description"
+      content="Gere CPFs válidos para testes e desenvolvimento."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/imagens/Gerador-de-Senha.webp" />
+
+    <link rel="stylesheet" href="assets/cpf.css" />
+    <title>Gerador de CPF</title>
+  </head>
+  <body>
+    <header>
+      <div class="badge">🇧🇷 Ferramenta Gratuita</div>
+      <h1>Gerador de <span>CPF</span></h1>
+      <p class="subtitle">
+        CPFs válidos gerados para uso em testes e desenvolvimento
+      </p>
+    </header>
+
+    <main class="card">
+      <div class="options">
+        <div class="option-row">
+          <span class="option-label">Exibir formatado (XXX.XXX.XXX-XX)</span>
+          <label class="toggle">
+            <input type="checkbox" id="toggleFormatado" checked />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="option-row">
+          <span class="option-label">Quantidade</span>
+          <div class="qty-control">
+            <button class="qty-btn" id="btnMenos">−</button>
+            <span class="qty-value" id="qtdDisplay">1</span>
+            <button class="qty-btn" id="btnMais">+</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-generate" id="btnGerar">⚡ Gerar CPF</button>
+
+      <div class="results" id="results">
+        <p class="placeholder">Clique em "Gerar CPF" para começar</p>
+      </div>
+
+      <div class="warning">
+        ⚠️ Os CPFs gerados são válidos matematicamente e destinados
+        <strong>apenas para testes</strong> em ambientes de desenvolvimento. O
+        uso indevido é de responsabilidade do usuário.
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Feito por
+        <a href="https://github.com/rodrigojordison" target="_blank"
+          >Rodrigo Silva</a
+        >
+        &mdash; Veja também: <a href="index.html">Gerador de Senha</a>
+      </p>
+    </footer>
+
+    <script src="assets/cpf.js"></script>
+  </body>
+</html>

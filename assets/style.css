@@ -343,14 +343,16 @@ body.dark .checkbox-item input:checked ~ span {
 }
 
 .fields-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 1.5rem 2rem;
   margin-top: 1.5rem;
 }
 @media (max-width: 560px) {
   .fields-row {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
@@ -459,4 +461,83 @@ body.dark .entrada input[type="text"] {
 }
 .entrada button:active {
   transform: scale(0.97);
+}
+
+footer {
+  margin-top: 2rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-align: center;
+  animation: fadeUp 0.6s ease both;
+  animation-delay: 0.2s;
+  background: linear-gradient(145deg, #101b58, #3b4996);
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --- Novas Animações e Suavização --- */
+
+/* Suaviza todas as transições de cores e sombras do card */
+.config-card,
+.entrada input,
+.entrada button,
+.checkbox-item span,
+.checkbox-item input {
+  transition: all 0.3s ease;
+}
+
+/* Animação de entrada dos elementos principais ao carregar a página */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+.config-card {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+.entrada {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes highlightFade {
+  0% {
+    background-color: rgba(59, 73, 150, 0.2);
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: transparent;
+    transform: scale(1);
+  }
+}
+
+.senha-atualizada {
+  animation: highlightFade 0.4s ease-out;
+}
+
+.checkbox-item:hover {
+  transform: translateX(5px);
+}
+
+.entrada button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(71, 184, 255, 0.6);
 }
