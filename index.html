@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Gerador de Senha é uma ferramenta online que permite criar senhas seguras e personalizadas. Com opções para escolher o tipo de caracteres e o comprimento, você pode gerar senhas fortes para proteger suas contas e dados pessoais."
+    />
+    <meta
+      name="keywords"
+      content="gerador de senha, senha segura, criar senha, ferramenta online, personalizar senha, proteger contas, dados pessoais"
+    />
+    <meta name="author" content="Rodrigo Silva" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="assets/imagens/Gerador-de-Senha.webp" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Gerador de Senha</title>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="title">
+        <h1>Gerador de Senha</h1>
+      </div>
+      <div class="header-right">
+        <div class="cpf">
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            >Gerador de CPF</a
+          >
+        </div>
+
+        <label class="theme-toggle" title="Alternar tema">
+          <input type="checkbox" id="themeCheck" />
+          <div class="toggle-track">
+            <div class="cloud1"></div>
+            <div class="cloud2"></div>
+            <div class="star1"></div>
+            <div class="star2"></div>
+            <div class="star3"></div>
+            <div class="toggle-knob"></div>
+          </div>
+        </label>
+      </div>
+    </header>
+
+    <main class="gerador">
+      <div class="logo">
+        <img
+          src="assets/imagens/Gerador-de-Senha.webp"
+          alt="Gerador de Senha"
+        />
+        <p>Gere senhas seguras de todos os tamanhos de forma aleatória</p>
+      </div>
+
+      <div class="config-card">
+        <h2>⚙️ Configurações</h2>
+
+        <div class="config-grid">
+          <div class="config-group">
+            <label class="group-label">Primeiro Caracter</label>
+            <div class="checkbox-list">
+              <label class="checkbox-item">
+                <input type="radio" name="firstChar" value="numeral" checked />
+                <span>Numeral</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="radio" name="firstChar" value="maiuscula" />
+                <span>Maiúscula</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="radio" name="firstChar" value="minuscula" />
+                <span>Minúscula</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="radio" name="firstChar" value="outros" />
+                <span>Outros</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <label class="group-label">Outros Caracteres</label>
+            <div class="checkbox-list">
+              <label class="checkbox-item">
+                <input
+                  type="checkbox"
+                  name="otherChar"
+                  value="numeral"
+                  checked
+                />
+                <span>Numeral</span>
+              </label>
+              <label class="checkbox-item">
+                <input
+                  type="checkbox"
+                  name="otherChar"
+                  value="maiuscula"
+                  checked
+                />
+                <span>Maiúscula</span>
+              </label>
+              <label class="checkbox-item">
+                <input
+                  type="checkbox"
+                  name="otherChar"
+                  value="minuscula"
+                  checked
+                />
+                <span>Minúscula</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="otherChar" value="outros" />
+                <span>Outros</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="fields-row">
+          <div class="field-group">
+            <label for="tamanhoInput">Tamanho</label>
+            <input
+              type="number"
+              id="tamanhoInput"
+              value="12"
+              min="1"
+              max="64"
+            />
+          </div>
+
+          >
+          <div class="field-group">
+            <label for="outrosInput">Caracteres especiais</label>
+            <input type="text" id="outrosInput" placeholder="ex: !@#$%" />
+          </div>
+        </div>
+      </div>
+
+      <div class="entrada">
+        <input
+          type="text"
+          id="senhaOutput"
+          placeholder="Sua senha aparecerá aqui…"
+          readonly
+        />
+        <button onclick="gerarSenha()">Gerar Senha</button>
+      </div>
+    </main>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
